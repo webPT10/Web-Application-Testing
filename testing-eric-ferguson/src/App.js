@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './App.css'
 
 import Dashboard from './components/Dashboard';
 import Display from './components/Display';
@@ -13,7 +14,7 @@ function App() {
   //BALLS
   const [ball, setBall] = useInput('ball', 0);
   const ballChanges = () => {
-    if (ball === 4) {
+    if (ball === 3) {
       resetAll();
     } else {
       setBall(ball + 1)
@@ -23,7 +24,7 @@ function App() {
   //STRIKES
   const [strike, setStrike] = useInput('strike', 0);
   const strikeChanges = () => {
-    if (strike === 3) {
+    if (strike === 2) {
       resetAll();
     } else {
       setStrike(strike + 1)
